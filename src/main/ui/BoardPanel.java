@@ -19,8 +19,7 @@ public class BoardPanel extends JPanel {
 
     public BoardPanel(ButtonBoard board) {
         super();
-        //this.setLayout(new BoxLayout(this, BoxLayout.Y_AXIS)); //TODO: GridLayout instead
-        this.setLayout(new GridLayout());
+        this.setLayout(new GridLayout(0,2));
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
         setBackground(Color.LIGHT_GRAY);
         this.board = board;
@@ -35,6 +34,7 @@ public class BoardPanel extends JPanel {
         for (Component c : this.getComponents()) {
             this.remove(c);
         }
+        this.setLayout(new GridLayout(0,colCount()));
         for (Button b : board.getButtons()) {
             JButton b1 = new JButton(b.getName());
             buttonList.add(b1);
@@ -42,6 +42,11 @@ public class BoardPanel extends JPanel {
             b1.setVerticalTextPosition(AbstractButton.CENTER);
             b1.setHorizontalTextPosition(AbstractButton.CENTER);
         }
+    }
+
+    // EFFECTS: Calculates the appropriate number of columns of buttons
+    private int colCount() {
+        return (Math.max((board.buttons.size() / 8) + 1, 2));
     }
 
     // MODIFIES: this.jbuttons

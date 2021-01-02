@@ -1,2 +1,8 @@
 *.class
 workspace.xml
+checkstyle.xml
+**/.DS_STORE
+**/META-INF
+.idea
+out
+.gitattributes
