@@ -1,5 +1,5 @@
 # ButtonBoard
-... is a simple soundboard application made with Java and Swing for CPSC 210
+... is a simple soundboard application made for CPSC 210's open-ended Java project
 
 ![Demo](./demo/many.png)
 
@@ -12,8 +12,7 @@
 
 ## TODO list
 - Board and buttons are deleted like a queue, and can't be picked for deletion
-- Calculation of number of columns (of buttons) currently works, but is a very basic implementation
-- UI is pretty boring
+- Improve calculation of rows/cols of buttons
 
 ## Work used
 Text to speech synthesizer library used: FreeTTS
